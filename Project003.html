@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive E-commerce Layout</title>
+    <style>
+        /* General styling */
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            height: 30px;
+            width: 100%;
+            background-color: rgb(230, 230, 230);
+            justify-content: center;
+            align-items: center;
+            font-size: small;
+        }
+
+        .navbar ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .navbar li {
+            padding: 0 10px;
+            font-size: 11px;
+            text-transform: capitalize;
+        }
+
+        /* Link Styling */
+        a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: rgb(151, 151, 151);
+        }
+
+        /* Logo Section */
+        .divlogo {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            height: 40px;
+            width: 40px;
+        }
+
+        /* Category Section */
+        .category ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .category li {
+            margin: 0 10px;
+            font-size: medium;
+        }
+
+        /* Carousel Section */
+        .carousel {
+            height: 300px;
+            background-image: url('images/bannerimage1.webp');
+            background-size: cover;
+            background-position: center;
+            margin: 2% auto;
+        }
+
+        /* Product Sections */
+        .women-section, .men-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .ws1, .ws2, .ws3, .ms1, .ms2, .ms3 {
+            width: 100%;
+            max-width: 250px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .ws1 img, .ws2 img, .ws3 img, .ms1 img, .ms2 img, .ms3 img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* "Shop Now" Button Styling */
+        .women-section a, .men-section a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #7c0e0e;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .women-section a:hover, .men-section a:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        /* Promo Section */
+        .inpagediv {
+            background-color: rgb(94, 8, 8);
+            color: aliceblue;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 2%;
+        }
+
+        .button1 {
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 5%;
+            color: aliceblue;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button1:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .footer .fdiv {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        .footer h2 {
+            font-size: 1.2em;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar {
+                font-size: 10px;
+            }
+
+            .carousel {
+                height: 200px;
+            }
+
+            .category ul {
+                flex-wrap: wrap;
+                font-size: small;
+            }
+
+            .women-section, .men-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .ws1, .ws2, .ws3, .ms1, .ms2, .ms3 {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer .fdiv {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul>
+            <li>WELCOME TO J.</li>
+            <li><a href="#">SIGN IN</a></li>
+            <li><a href="#">TRACKING INFO</a></li>
+            <li><a href="#">CORPORATE INQUIRY</a></li>
+            <li><a href="#">PKR</a><input type="currency"></li>
+        </ul>
+    </div>
+
+    <div class="divlogo">
+        <img class="logo" src="images/J.logo.webp" alt="Logo">
+    </div>
+
+    <div class="category">
+        <ul>
+            <li><a href="#">NEW ARRIVALS</a></li>
+            <li><a href="#">ONLINE EDITION</a></li>
+            <li><a href="#">CAST AND CREW</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">BOYS & GIRLS</a></li>
+            <li><a href="#">FRAGRANCE</a></li>
+            <li><a href="#">MAKEUP</a></li>
+            <li><a href="#">CATALOGUE</a></li>
+        </ul>
+    </div>
+
+    <div class="carousel"></div>
+
+    <!-- Women Section -->
+    <div class="women-section">
+        <div class="ws1">
+            <img src="images/women1.webp" alt="Unstitched">
+            <p>Unstitched</p>
+            <a href="#">SHOP NOW</a>
+        </div>
+        <div class="ws2">
+            <img src="images/women2.webp" alt="Unstitched">
+            <p>Unstitched</p>
+            <a href="#">SHOP NOW</a>
+        </div>
+        <div class="ws3">
+            <img src="images/women3.webp" alt="Stitched">
+            <p>Stitched</p>
+            <a href="#">SHOP NOW</a>
+        </div>
+    </div>
+
+    <!-- Men Section -->
+    <div class="men-section">
+        <div class="ms1">
+            <img src="images/men1.webp" alt="Shalwar Kameez">
+            <p>Shalwar Kameez</p>
+            <a href="#">SHOP NOW</a>
+        </div>
+        <div class="ms2">
+            <img src="images/men2.webp" alt="Kurta">
+            <p>Kurta</p>
+            <a href="#">SHOP NOW</a>
+        </div>
+        <div class="ms3">
+            <img src="images/men3.webp" alt="Waist Coat">
+            <p>Waist Coat</p>
+            <a href="#">SHOP NOW</a>
+        </div>
+    </div>
+
+    <!-- Promo Section -->
+    <div class="inpagediv">
+        <h2>BE THE FIRST</h2>
+        <p>New arrivals. Exclusive previews. First access to sales. Sign up to stay in the know.</p>
+        <input type="email" placeholder="Enter email address">
+        <button class="button1">Sign up</button>
+    </div>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="footer">
+        <div class="fdiv">
+            <h2>NEED HELP?</h2>
+            <ul>
+                <li>+92 2111 112 111 (9am - 10pm Mon - Sat)</li>
+                <li>eshop@junaidjumshaid.com</li>
+            </ul>
+        </div>
+        <div class="fdiv">
+            <h2>CUSTOMER SERVICE</h2>
+            <ul>
+                <li>Contact Us</li>
+                <li>Delivery & Orders</li>
+                <li>Returns & Exchanges</li>
+                <li>Terms & Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Track My Order</li>
+                <li>Payment Guide</li>
+            </ul>
+        </div>
+        <div class="fdiv">
+            <h2>COMPANY</h2>
+            <ul>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Stores</li>
+            </ul>
+        </div>
+        <div class="fdiv">
+            <h2>FOLLOW US</h2>
+            <ul>
+                <li><img src="images/gift-icon.webp" alt="Social Icon"></li>
+                <li><img src="images/gift-icon.webp" alt="Social Icon"></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
